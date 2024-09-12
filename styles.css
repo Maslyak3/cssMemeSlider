@@ -7,10 +7,10 @@ body {
     padding: 2rem;
 }
 
-.pics-slides {
+.pics-slides, .text  {
     display: flex;
     position: relative;
-    max-width: 48rem;
+    max-width: 31rem;
     margin: 0 auto;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -20,7 +20,7 @@ body {
 .pics-slides::-webkit-scrollbar {
     display: none;
 }
-.pics-slides img {
+.pics-slides img, .text div{
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
@@ -41,10 +41,15 @@ body {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: gray;
+    background-color: brown;
     opacity: 0.75;
     transition: opacity ease 250ms;
 }
-input {
-    cursor: pointer;
+.pics-slides p {
+    color: beige;
+    font-size: 18px
 }
+.text::-webkit-scrollbar {
+    display: none;
+}
+
