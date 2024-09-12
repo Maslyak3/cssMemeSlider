@@ -5,9 +5,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+
 }
 
-.pics-slides, .text  {
+.pics-slides  {
     display: flex;
     position: relative;
     max-width: 31rem;
@@ -20,7 +21,7 @@ body {
 .pics-slides::-webkit-scrollbar {
     display: none;
 }
-.pics-slides img, .text div{
+.pics-slides img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
@@ -31,15 +32,13 @@ body {
 .control-buttons {
     display: flex;
     gap: 20px;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+
     z-index: 1;
+    margin-left: 55vw;
 }
 .control-buttons a {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     background-color: brown;
     opacity: 0.75;
@@ -49,7 +48,9 @@ body {
     color: beige;
     font-size: 18px
 }
-.text::-webkit-scrollbar {
-    display: none;
+@media (max-width: 500px) {
+    .control-buttons {
+    bottom: 19rem;
+    margin-left: 50vw;
+    }
 }
-
